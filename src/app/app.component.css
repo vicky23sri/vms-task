@@ -1,0 +1,13 @@
+* {
+  font-family: Lato;
+}
+.label, .label-default, .label-danger {
+  border: 1px solid;
+  border-radius: 5px;
+}
+.label-default {
+  background-color: #c9c9c9;
+}
+.label-danger {
+  background-color: #fa4040;
+}

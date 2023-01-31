@@ -1,1 +1,123 @@
 /* You can add global styles to this file, and also import other style files */
+
+@-webkit-keyframes typing {
+  0% {
+    width: 100%;
+  }
+  25% {
+    width: 100%;
+  }
+  50% {
+    width: 0;
+  }
+  75% {
+    width: 0;
+  }
+  200% {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ff5050;
+  }
+}
+
+@-moz-keyframes typing {
+  0% {
+    width: 100%;
+  }
+  25% {
+    width: 100%;
+  }
+  50% {
+    width: 0;
+  }
+  75% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@-moz-keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ff5050;
+  }
+}
+/* standard syntax */
+@keyframes typing {
+  0% {
+    width: 100%;
+  }
+  25% {
+    width: 100%;
+  }
+  50% {
+    width: 0;
+  }
+  75% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ff5050;
+  }
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  color: #222222;
+  float: left;
+}
+
+.type {
+  position: relative;
+  font-size: 200%;
+  font-family: Consolas, monospace;
+  color: #005858;
+  margin-left: 10px;
+  margin-top: 25px;
+}
+
+h1 span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  background: white;
+  /* same as background */
+
+  border-left: 0.15em solid #ff5050;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  animation: typing 10s steps(12, end),
+    /* # of steps = # of characters */ blink-caret 1s step-end infinite;
+
+  -webkit-animation: typing 10s steps(13, end),
+    /* # of steps = # of characters */ blink-caret 1s step-end infinite;
+
+  -moz-animation: typing 10s steps(13, end),
+    /* # of steps = # of characters */ blink-caret 1s step-end infinite;
+}
